@@ -42,3 +42,9 @@ input{
     color: brown;
     margin-left:46%;
 }
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
