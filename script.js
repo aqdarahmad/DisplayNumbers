@@ -1,3 +1,46 @@
+
+
+// body {
+//     margin: 0;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     font-family: Arial, sans-serif;
+// }
+
+// .content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+
+// button {
+//     font-size: 20px;
+//     margin-top: 20px;
+//     padding: 10px;
+//     cursor: pointer;
+//     border: 2px solid black;
+// }
+
+// input {
+//     padding: 10px;
+//     font-size: 18px;
+//     width: 300px;
+//     text-align: center;
+// }
+
+// .error {
+//     color: red;
+//     margin-top: 10px;
+// }
+
+// .result {
+//     margin-top: 10px;
+//     font-weight: bold;
+// }
+
+
 // function DisplayNumbers() {
 //     const input = document.getElementById('numberinput');
    
