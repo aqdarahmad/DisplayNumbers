@@ -1,19 +1,22 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Counter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <h1>Enter number between 1 and 999</h1>
-    
-<input type="text" id="numberInput"  placeholder="Enter number" />
-<br><br>
-<button onclick="showNumber()">Display</button>
-<div id="a1">
-    <div class="display" id="display"></div>
-</div>
+  <section class="content">
+      <div>
+          <input id="numberinput" type="text" size="60" placeholder="Write a number between 0-999">
+      </div>
+      <button id="button" onclick="displayNumbers()">Display</button>
+      <div id="error"></div>
+      <div id="result"></div> </section>
+
+    <script isrc="script.js"></script>
 </body>
 </html>
