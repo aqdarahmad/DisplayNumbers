@@ -1,66 +1,4 @@
-
-
-// body {
-//     margin: 0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh;
-//     font-family: Arial, sans-serif;
-// }
-
-// .content {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-
-// button {
-//     font-size: 20px;
-//     margin-top: 20px;
-//     padding: 10px;
-//     cursor: pointer;
-//     border: 2px solid black;
-// }
-
-// input {
-//     padding: 10px;
-//     font-size: 18px;
-//     width: 300px;
-//     text-align: center;
-// }
-
-// .error {
-//     color: red;
-//     margin-top: 10px;
-// }
-
-// .result {
-//     margin-top: 10px;
-//     font-weight: bold;
-// }
-
-
-// function DisplayNumbers() {
-//     const input = document.getElementById('numberinput');
-   
-//     const resultDiv = document.getElementById('result');
-//     const newval = document.getElementById('newval');
-
-//     if (isNaN(value) ) {
-
-//         resultDiv.textContent = ` Please enter a number between 0 and 999.`;
-//     if(value > 999 || value < 0)
-//         resultDiv.textContent = `Invalid input: ${input}. Please enter a number between 0 and 999.`;
-
-//     if (!/^\d*$/.test(value)) {
-//         error.textContent = "Only numbers are allowed!";
-//     } else {
-//         resultDiv.textContent = `You entered: ${value}`;
-//     }
-// }
-// }
- const segmentMap = {
+const segmentMap = {
   "0": ["a", "b", "c", "d", "e", "f"],
   "1": ["b", "c"],
   "2": ["a", "b", "g", "e", "d"],
@@ -76,6 +14,7 @@
 function createDigit(digit) {
   const digitEl = document.createElement('div');
   digitEl.className = 'digit';
+
   ['a', 'b', 'c', 'd', 'e', 'f', 'g'].forEach(seg => {
     const segEl = document.createElement('div');
     segEl.className = `segment ${seg}`;
@@ -84,18 +23,29 @@ function createDigit(digit) {
     }
     digitEl.appendChild(segEl);
   });
+
   return digitEl;
 }
 
 function showNumber() {
-  const input = document.getElementById("numberInput").value;
+  const input = document.getElementById("numberInput").value.trim();
   const display = document.getElementById("display");
-  display.innerHTML = '';
+  const error = document.getElementById("error");
+  const result = document.getElementById("result");
 
-  if (input >= 0 && input <= 999) {
-    const padded = input.toString().padStart(3, '0');
-    for (let ch of padded) {
-      display.appendChild(createDigit(ch));
-    }
+  display.innerHTML = '';
+  error.textContent = '';
+  result.textContent = '';
+
+  if (!/^\d{1,3}$/.test(input)) {
+    error.textContent = "⚠️ Only numbers between 0 and 999 are allowed.";
+    return;
   }
+
+  const padded = input.padStart(3, '0');
+  for (let ch of padded) {
+    display.appendChild(createDigit(ch));
+  }
+
+  result.textContent = `You entered: ${input}`;
 }
