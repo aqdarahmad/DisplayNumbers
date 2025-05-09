@@ -1,22 +1,23 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Counter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Seven Segment Display</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section class="content">
-      <div>
-          <input id="numberinput" type="text" size="60" placeholder="Write a number between 0-999">
-      </div>
-      <button id="button" onclick="displayNumbers()">Display</button>
-      <div id="error"></div>
-      <div id="result"></div> </section>
+    <input id="numberInput" type="text" placeholder="Enter numbers between 0 and 999">
+    <button onclick="showNumber()">Display</button>
+    <div id="error"></div>
+    <div id="result"></div>
+     <div class="main-container">
+    <div class="display-container" >
+      <div class="display" id="display"></div>
+    </div>
+     </div>
+  </section>
 
-    <script isrc="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
