@@ -1,17 +1,73 @@
- .display {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+
+.main-container{
+  display:flex;
   justify-content: center;
+  border-color: black;
+  width: 30%;
+  height: 200px;
+  border-style: solid;
 }
-#a1{
-    background-color: black;
-    width: 500px;
-    height: 200px;
-    margin-left: 33%;
-    padding-top: 18px;
-    margin-top: 2%;
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  width: 300px;
+  text-align: center;
+  background-color: rgb(255, 250, 245);
+  color: rgba(0, 0, 0, 0.844);
+  border: 1px solid black;
+  width: 50%;
 }
+
+button {
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid rgb(39, 15, 15);
+  background-color: rgb(255, 248, 248);
+  color: rgb(0, 0, 0);
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.display-container {
+  background-color: black;
+  width: 55%;
+  height: 140px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  display: flex;
+  gap: 30px;
+
+}
+
 .digit {
   position: relative;
   width: 50px;
@@ -22,29 +78,17 @@
   position: absolute;
   background-color: rgb(166, 158, 158);
   border-radius: 33%;
- 
 }
 
 .on {
   background-color: rgb(205, 22, 22);
 }
-h1{
-    color: brown;
-    text-align: center;
-  }
-button{
-    color: brown;
-    background-color: bisque;
-    margin-left: 50%;
-}
-input{
-    background-color: bisque;
-    color: brown;
-    margin-left:46%;
-}
 
-#result {
-  margin-top: 20px;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-}
+/* Segment Positions */
+.a { top: 0; left: 10px; width: 30px; height: 10px; }
+.b { top: 10px; right: 0; width: 10px; height: 30px; }
+.c { bottom: 10px; right: 0; width: 10px; height: 30px; }
+.d { bottom: 0; left: 10px; width: 30px; height: 10px; }
+.e { bottom: 10px; left: 0; width: 10px; height: 30px; }
+.f { top: 10px; left: 0; width: 10px; height: 30px; }
+.g { top: 40px; left: 10px; width: 30px; height: 10px; }
